@@ -33,6 +33,9 @@ public @Data class Beneficiaire  {
 	@Column(unique = true)@JoinColumn(name="numero_compte")
 	String numeroCompte;
 
-		
+	
+	@JoinColumn(name="Compte_owner")
+	@ManyToOne
+	Compte compteOwner;
 		
 }
