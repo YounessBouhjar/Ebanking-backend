@@ -115,7 +115,7 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers(HttpMethod.PUT,"/agent/{id}").hasRole("Admin")	//modifier agent
 			.antMatchers(HttpMethod.DELETE,"/agent/{id}").hasRole("Admin")	//supprimer agent
 			.antMatchers(HttpMethod.GET,"/agence/{id}/agents").hasRole("Admin")	//afficher agents
-			.antMatchers(HttpMethod.GET,"/agent/username/{username}").hasRole("Agent")		//agent par username
+			.antMatchers(HttpMethod.GET,"/agent/username/{username}").permitAll()		//agent par username
 			.antMatchers(HttpMethod.GET,"/agents").permitAll()	//afficher agent
 			
 			//AGENCE
@@ -143,13 +143,16 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers(HttpMethod.GET,"/beneficiaire/{id}").permitAll()
 			.antMatchers(HttpMethod.DELETE,"/beneficiaire/{id}").permitAll()
 			//COMPTE
-			.antMatchers(HttpMethod.GET,"/client/{id}/comptes").permitAll()	//afficher comptes
-			.antMatchers(HttpMethod.GET,"/comptes").permitAll()	//afficher compte
-			.antMatchers(HttpMethod.POST,"/comptes").permitAll()	//creer compte
-			.antMatchers(HttpMethod.PUT,"/compte/{id}").permitAll()	//modifier compte
-			.antMatchers(HttpMethod.DELETE,"/compte/{id}").permitAll()//supprimer compte
-			.antMatchers(HttpMethod.GET,"/compte/{numero}").permitAll()	//afficher compte
-			.antMatchers(HttpMethod.GET,"/contratPDF/{id}").permitAll()	//Contrat PDF
+			.antMatchers(HttpMethod.GET,"/client/{id}/comptes").hasAnyRole("Agent","Client")	//afficher comptes
+			.antMatchers(HttpMethod.GET,"/comptes/all").hasAnyRole("Agent","Client")	//afficher compte
+			.antMatchers(HttpMethod.GET,"/comptes").hasAnyRole("Agent")	//afficher compte
+			.antMatchers(HttpMethod.GET,"/compte/prop/{prop}").permitAll()	
+
+			.antMatchers(HttpMethod.POST,"/comptes").hasRole("Agent")	//creer compte
+			.antMatchers(HttpMethod.PUT,"/compte/{id}").hasRole("Agent")	//modifier compte
+			.antMatchers(HttpMethod.DELETE,"/compte/{id}").hasRole("Client")//supprimer compte
+			.antMatchers(HttpMethod.GET,"/compte/{numero}").hasRole("Client")	//afficher compte
+			.antMatchers(HttpMethod.GET,"/contratPDF/{id}").hasRole("Client")	//Contrat PDF
 			
 			//VIREMENT ET RECHARGE
 			.antMatchers(HttpMethod.GET,"/compte/{id}/virements").permitAll()	//afficher virements
