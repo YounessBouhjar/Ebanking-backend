@@ -36,6 +36,10 @@ public class ClientService {
 	Logger logger = LoggerFactory.getLogger(ClientService.class.getName());
 	
 	
+	public Client updateClientNew(Client client) {
+		return userRep.save(client);
+	}
+	
 	public List<Client> getClients(Long id)  throws NotFoundException
 	{
 		

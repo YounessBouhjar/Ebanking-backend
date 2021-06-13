@@ -172,7 +172,7 @@ public class CompteService {
 
 		rep.save(compte);
 
-		contratService.createContrat(compte,client);
+		//contratService.createContrat(compte,client);
 
 		logger.debug("L'agent "+agent.getNom()+" "+agent.getPrenom()+" ayant le Username "+agent.getUsername()
 		+" a créé le compte: "+compte.getNumero()+" au client avec le Username "+client.getUsername());

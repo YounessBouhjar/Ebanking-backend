@@ -145,12 +145,12 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 			//COMPTE
 			.antMatchers(HttpMethod.GET,"/client/{id}/comptes").hasAnyRole("Agent","Client")	//afficher comptes
 			.antMatchers(HttpMethod.GET,"/comptes/all").hasAnyRole("Agent","Client")	//afficher compte
-			.antMatchers(HttpMethod.GET,"/comptes").hasAnyRole("Agent")	//afficher compte
+			.antMatchers(HttpMethod.GET,"/comptes").hasRole("Agent")	//afficher compte
 			.antMatchers(HttpMethod.GET,"/compte/prop/{prop}").permitAll()	
 
 			.antMatchers(HttpMethod.POST,"/comptes").hasRole("Agent")	//creer compte
 			.antMatchers(HttpMethod.PUT,"/compte/{id}").hasRole("Agent")	//modifier compte
-			.antMatchers(HttpMethod.DELETE,"/compte/{id}").hasRole("Client")//supprimer compte
+			.antMatchers(HttpMethod.DELETE,"/compte/{id}").hasRole("Agent")//supprimer compte
 			.antMatchers(HttpMethod.GET,"/compte/{numero}").hasRole("Client")	//afficher compte
 			.antMatchers(HttpMethod.GET,"/contratPDF/{id}").hasRole("Client")	//Contrat PDF
 			
