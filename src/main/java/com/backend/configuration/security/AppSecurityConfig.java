@@ -171,6 +171,14 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers(HttpMethod.GET,"/operationPDF/{id}").hasRole("Agent")	// Reçu operation PDF
 			.antMatchers(HttpMethod.POST,"/operations").hasRole("Agent")	//creer operation
 			
+			
+
+			//VIREMENT MULTIPLE
+			.antMatchers(HttpMethod.GET,"/virement/multiple").permitAll()	//afficher virements
+			.antMatchers(HttpMethod.GET,"/virement/multiple/{id}").permitAll() //afficher virement specifique
+			.antMatchers(HttpMethod.POST,"/virement/multiple").permitAll()	//poster virements
+			
+			
 			.and()
 			.httpBasic()
 			.and()

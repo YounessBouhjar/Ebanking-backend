@@ -31,7 +31,15 @@ public class BeneficiaireService {
 		return beneficiaire;
 	}
 	
-	
+
+	public Beneficiaire getBeneficiaireByNumeroCompte(String numero)
+	{
+		
+		Beneficiaire beneficiaire = beneficiaireRepository.findByNumeroCompte(numero)
+				.orElseThrow(() -> new NotFoundException("Aucun bénéficiaire avec le compte "+numero+" trouvé."));
+		
+		return beneficiaire;
+	}
 	
 	
 	public void deleteBeneficiaire(Long id)
