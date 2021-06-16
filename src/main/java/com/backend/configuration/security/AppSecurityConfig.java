@@ -174,13 +174,11 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers(HttpMethod.GET,"/operationPDF/{id}").hasRole("Agent")	// Reçu operation PDF
 			.antMatchers(HttpMethod.POST,"/operations").hasRole("Agent")	//creer operation
 			
-<<<<<<< HEAD
 			.antMatchers(HttpMethod.GET,"/appointments").permitAll()	//afficher appointment
 			.antMatchers(HttpMethod.POST,"/addAppointment").permitAll()	//creer appointment
 			.antMatchers(HttpMethod.PUT,"/appointment/{id}").permitAll()	//modifier appointment
 			.antMatchers(HttpMethod.DELETE,"/appointment/{id}").permitAll()	//modifier appointment
 
-=======
 			
 
 			//VIREMENT MULTIPLE
@@ -189,7 +187,6 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers(HttpMethod.POST,"/virement/multiple").permitAll()	//poster virements
 			
 			
->>>>>>> 0050bafcc365c8210f25fd44df5c8ddff5019705
 			.and()
 			.httpBasic()
 			.and()
