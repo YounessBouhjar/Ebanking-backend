@@ -1172,3 +1172,4 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 2021-06-16 22:44:04,231 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 24696 (C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back)
 2021-06-16 22:44:04,237 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
 2021-06-16 22:44:04,238 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
+2021-06-16 22:44:47,153 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 43.507 seconds (JVM running for 44.342)

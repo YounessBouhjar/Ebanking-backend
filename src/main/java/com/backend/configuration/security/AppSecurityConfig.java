@@ -174,9 +174,10 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers(HttpMethod.GET,"/compte/{id}/operations").hasAnyRole("Agent","Client")	//afficher operations
 			.antMatchers(HttpMethod.GET,"/operationPDF/{id}").hasRole("Agent")	// Reçu operation PDF
 			.antMatchers(HttpMethod.POST,"/operations").hasRole("Agent")	//creer operation
-			
-			
+
 			//APPOINTMENTS
+
+
 			.antMatchers(HttpMethod.GET,"/appointments").permitAll()	//afficher appointment
 			.antMatchers(HttpMethod.POST,"/addAppointment").permitAll()	//creer appointment
 			.antMatchers(HttpMethod.PUT,"/appointment/{id}").permitAll()	//modifier appointment
