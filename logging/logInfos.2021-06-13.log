@@ -1,15 +1,10 @@
-2021-06-11 02:01:39,996 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 10372 (C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back)
-2021-06-11 02:01:40,000 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2021-06-11 02:01:40,000 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
-2021-06-11 02:02:16,386 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 36.806 seconds (JVM running for 37.354)
-2021-06-11 03:42:34,286 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 1948 (C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back)
-2021-06-11 03:42:34,293 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2021-06-11 03:42:34,294 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
-2021-06-11 03:43:27,148 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 53.839 seconds (JVM running for 55.623)
-2021-06-11 15:48:52,785 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 11692 (C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back)
-2021-06-11 15:48:52,790 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2021-06-11 15:48:52,791 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
-2021-06-11 15:49:19,873 ERROR com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Exception during pool initialization.
+2021-06-13 12:11:31,998 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on DESKTOP-SEQG02H with PID 7936 (C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back\target\classes started by imran in C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back)
+2021-06-13 12:11:32,002 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2021-06-13 12:11:32,003 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
+2021-06-13 14:08:05,948 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on DESKTOP-SEQG02H with PID 6580 (C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back\target\classes started by imran in C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back)
+2021-06-13 14:08:05,954 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2021-06-13 14:08:05,956 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
+2021-06-13 14:08:16,541 ERROR com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Exception during pool initialization.
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
@@ -68,10 +63,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
@@ -81,19 +77,17 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
 	... 49 common frames omitted
-Caused by: java.net.ConnectException: Connection timed out: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
-	at java.net.Socket.connect(Socket.java:606)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:648)
 	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
 	... 52 common frames omitted
-2021-06-11 15:49:43,588 ERROR com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Exception during pool initialization.
+2021-06-13 14:08:23,165 ERROR com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Exception during pool initialization.
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
@@ -151,10 +145,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
@@ -164,22 +159,20 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
 	... 48 common frames omitted
-Caused by: java.net.ConnectException: Connection timed out: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
-	at java.net.Socket.connect(Socket.java:606)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:648)
 	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
 	... 51 common frames omitted
-2021-06-11 15:49:43,650 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] Communications link failure
+2021-06-13 14:08:23,170 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2021-06-11 15:49:43,702 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+2021-06-13 14:08:23,220 ERROR org.springframework.boot.SpringApplication [main] Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
@@ -250,10 +243,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
@@ -263,22 +257,20 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
 	... 48 common frames omitted
-Caused by: java.net.ConnectException: Connection timed out: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
-	at java.net.Socket.connect(Socket.java:606)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:648)
 	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
 	... 51 common frames omitted
-2021-06-11 15:51:17,129 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 25008 (C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back)
-2021-06-11 15:51:17,134 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2021-06-11 15:51:17,135 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
-2021-06-11 15:51:43,744 ERROR com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Exception during pool initialization.
+2021-06-13 14:15:38,053 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on DESKTOP-SEQG02H with PID 6380 (C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back\target\classes started by imran in C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back)
+2021-06-13 14:15:38,058 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2021-06-13 14:15:38,059 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
+2021-06-13 14:15:48,465 ERROR com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Exception during pool initialization.
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
@@ -337,10 +329,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
@@ -350,19 +343,17 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
 	... 49 common frames omitted
-Caused by: java.net.ConnectException: Connection timed out: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
-	at java.net.Socket.connect(Socket.java:606)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:648)
 	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
 	... 52 common frames omitted
-2021-06-11 15:52:08,303 ERROR com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Exception during pool initialization.
+2021-06-13 14:15:55,874 ERROR com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Exception during pool initialization.
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
@@ -420,10 +411,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
@@ -433,22 +425,20 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
 	... 48 common frames omitted
-Caused by: java.net.ConnectException: Connection timed out: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
-	at java.net.Socket.connect(Socket.java:606)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:648)
 	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
 	... 51 common frames omitted
-2021-06-11 15:52:08,316 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] Communications link failure
+2021-06-13 14:15:55,881 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2021-06-11 15:52:08,358 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+2021-06-13 14:15:55,937 ERROR org.springframework.boot.SpringApplication [main] Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
@@ -519,10 +509,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
@@ -532,74 +523,196 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
 	... 48 common frames omitted
-Caused by: java.net.ConnectException: Connection timed out: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
-	at java.net.Socket.connect(Socket.java:606)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:648)
 	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
 	... 51 common frames omitted
-2021-06-11 15:53:05,532 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 23916 (C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back)
-2021-06-11 15:53:05,535 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2021-06-11 15:53:05,535 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
-2021-06-11 15:53:57,740 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 52.688 seconds (JVM running for 53.434)
-2021-06-11 16:27:42,664 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 22124 (C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back)
-2021-06-11 16:27:42,667 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2021-06-11 16:27:42,668 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
-2021-06-11 16:28:34,254 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 52.215 seconds (JVM running for 52.826)
-2021-06-11 16:30:04,912 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 372 (C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back)
-2021-06-11 16:30:04,915 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2021-06-11 16:30:04,915 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
-2021-06-11 16:30:51,353 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 46.809 seconds (JVM running for 47.358)
-2021-06-11 16:56:11,167 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 25644 (C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back)
-2021-06-11 16:56:11,170 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2021-06-11 16:56:11,171 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
-2021-06-11 16:56:58,245 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 47.541 seconds (JVM running for 48.134)
-2021-06-11 16:57:09,334 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 14676 (C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back)
-2021-06-11 16:57:09,337 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2021-06-11 16:57:09,337 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
-2021-06-11 16:57:54,901 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 46.033 seconds (JVM running for 46.679)
-2021-06-11 18:34:43,923 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8081-exec-7] HikariPool-1 - Connection is not available, request timed out after 30007ms.
-2021-06-11 18:34:43,973 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8081-exec-7] Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2021-06-11 18:35:22,083 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 7220 (C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back)
-2021-06-11 18:35:22,086 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2021-06-11 18:35:22,087 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
-2021-06-11 18:35:59,176 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 37.464 seconds (JVM running for 37.989)
-2021-06-11 22:09:27,674 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 848 (C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back)
-2021-06-11 22:09:27,678 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2021-06-11 22:09:27,678 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
-2021-06-11 22:10:14,051 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 47.568 seconds (JVM running for 49.825)
-2021-06-11 22:52:34,857 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 7952 (C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back)
-2021-06-11 22:52:34,860 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2021-06-11 22:52:34,860 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
-2021-06-11 22:53:07,998 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 33.516 seconds (JVM running for 34.116)
-2021-06-11 22:58:08,811 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 20508 (C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back)
-2021-06-11 22:58:08,815 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2021-06-11 22:58:08,816 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
-2021-06-11 22:58:41,715 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 33.322 seconds (JVM running for 33.829)
-2021-06-11 23:01:57,391 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 21136 (C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back)
-2021-06-11 23:01:57,395 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2021-06-11 23:01:57,396 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
-2021-06-11 23:02:32,648 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 35.642 seconds (JVM running for 36.211)
-2021-06-11 23:04:57,877 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 14464 (C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back)
-2021-06-11 23:04:57,879 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2021-06-11 23:04:57,880 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
-2021-06-11 23:05:30,859 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 33.282 seconds (JVM running for 33.834)
-2021-06-11 23:08:04,212 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 10332 (C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back)
-2021-06-11 23:08:04,214 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2021-06-11 23:08:04,215 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
-2021-06-11 23:08:29,257 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 2448 (C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back)
-2021-06-11 23:08:29,260 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2021-06-11 23:08:29,261 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
-2021-06-11 23:09:02,268 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 33.372 seconds (JVM running for 33.88)
-2021-06-11 23:10:33,796 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 7780 (C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\Nouveau dossier (4)\ebank-back)
-2021-06-11 23:10:33,798 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2021-06-11 23:10:33,799 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
-2021-06-11 23:11:06,334 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 32.897 seconds (JVM running for 33.383)
+2021-06-13 14:17:34,058 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on DESKTOP-SEQG02H with PID 5732 (C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back\target\classes started by imran in C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back)
+2021-06-13 14:17:34,065 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2021-06-13 14:17:34,066 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
+2021-06-13 14:17:47,391 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 14.238 seconds (JVM running for 15.589)
+2021-06-13 14:24:40,099 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on DESKTOP-SEQG02H with PID 1092 (C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back\target\classes started by imran in C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back)
+2021-06-13 14:24:40,103 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2021-06-13 14:24:40,104 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
+2021-06-13 14:25:24,401 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 45.063 seconds (JVM running for 46.25)
+2021-06-13 14:37:28,287 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on DESKTOP-SEQG02H with PID 5732 (C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back\target\classes started by imran in C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back)
+2021-06-13 14:37:28,293 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2021-06-13 14:37:28,294 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
+2021-06-13 14:38:14,853 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 47.371 seconds (JVM running for 48.643)
+2021-06-13 14:38:45,983 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on DESKTOP-SEQG02H with PID 9880 (C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back\target\classes started by imran in C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back)
+2021-06-13 14:38:45,987 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2021-06-13 14:38:45,988 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
+2021-06-13 14:39:27,738 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 42.461 seconds (JVM running for 43.493)
+2021-06-13 14:45:34,396 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8081-exec-5] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.io.FileNotFoundException: C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back\src\main\resources\contrats\compte_76021961924077434600_2021-06-13T14-45-31.pdf (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:291)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:234)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+	at com.backend.services.ContratService.createContrat(ContratService.java:124)
+	at com.backend.services.CompteService.addCompte(CompteService.java:175)
+	at com.backend.controllers.CompteController.addCompte(CompteController.java:117)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:204)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:52)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:216)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2021-06-13 14:47:58,855 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on DESKTOP-SEQG02H with PID 10112 (C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back\target\classes started by imran in C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back)
+2021-06-13 14:47:58,860 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2021-06-13 14:47:58,860 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
+2021-06-13 14:48:40,117 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 41.969 seconds (JVM running for 43.067)
+2021-06-13 14:49:26,421 DEBUG com.backend.services.CompteService [http-nio-8081-exec-2] L'agent Ejaidi fera3 ayant le Username ejjaidi a créé le compte: 52657888865210915426 au client avec le Username c
+2021-06-13 14:52:17,165 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on DESKTOP-SEQG02H with PID 3644 (C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back\target\classes started by imran in C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back)
+2021-06-13 14:52:17,170 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2021-06-13 14:52:17,171 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
+2021-06-13 14:53:07,813 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 51.295 seconds (JVM running for 52.357)
+2021-06-13 14:55:40,456 DEBUG com.backend.services.CompteService [http-nio-8081-exec-10] L'agent Ejaidi fera3 ayant le Username ejjaidi a supprimé le compte: 76021961924077434600
+2021-06-13 15:02:29,914 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on DESKTOP-SEQG02H with PID 3120 (C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back\target\classes started by imran in C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back)
+2021-06-13 15:02:29,918 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2021-06-13 15:02:29,918 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
+2021-06-13 15:03:11,667 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 42.418 seconds (JVM running for 43.701)
+2021-06-13 15:04:18,119 DEBUG com.backend.services.ClientService [http-nio-8081-exec-7] L'agent Ejaidi fera3 ayant le Username ejjaidi a supprimé le client avec le username c
+2021-06-13 15:22:55,485 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on DESKTOP-SEQG02H with PID 8884 (C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back\target\classes started by imran in C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back)
+2021-06-13 15:22:55,492 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2021-06-13 15:22:55,493 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
+2021-06-13 15:23:28,992 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on DESKTOP-SEQG02H with PID 6828 (C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back\target\classes started by imran in C:\Users\imran\OneDrive\Desktop\soufiane front\ebank-back)
+2021-06-13 15:23:28,998 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2021-06-13 15:23:29,002 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
+2021-06-13 15:23:42,848 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 14.867 seconds (JVM running for 16.354)
+2021-06-13 15:41:33,076 DEBUG com.backend.services.ClientService [http-nio-8081-exec-1] L'agent nooom23 pree33 ayant le Username agent a supprimé le client avec le username 
+2021-06-13 15:41:41,280 DEBUG com.backend.services.ClientService [http-nio-8081-exec-9] L'agent nooom23 pree33 ayant le Username agent a supprimé le client avec le username 
+2021-06-13 15:52:35,460 DEBUG com.backend.services.ClientService [http-nio-8081-exec-8] L'agent nooom23 pree33 ayant le Username agent a supprimé le client avec le username HKHK
+2021-06-13 16:05:01,661 DEBUG com.backend.services.CompteService [http-nio-8081-exec-7] L'agent nooom23 pree33 ayant le Username agent a créé le compte: 09598785716817783391 au client avec le Username h
+2021-06-13 16:12:58,986 DEBUG com.backend.services.CompteService [http-nio-8081-exec-8] L'agent nooom23 pree33 ayant le Username agent a supprimé le compte: 09598785716817783391
+2021-06-13 16:13:51,797 DEBUG com.backend.services.CompteService [http-nio-8081-exec-2] L'agent nooom23 pree33 ayant le Username agent a supprimé le compte: 71723730750060025006
+2021-06-13 16:14:57,974 DEBUG com.backend.services.CompteService [http-nio-8081-exec-8] L'agent nooom23 pree33 ayant le Username agent a supprimé le compte: 65828244677339920218
+2021-06-13 16:16:35,777 DEBUG com.backend.services.CompteService [http-nio-8081-exec-1] L'agent nooom23 pree33 ayant le Username agent a créé le compte: 49818969751623923660 au client avec le Username h
+2021-06-13 16:16:41,299 DEBUG com.backend.services.CompteService [http-nio-8081-exec-5] L'agent nooom23 pree33 ayant le Username agent a supprimé le compte: 49818969751623923660
+2021-06-13 16:18:45,729 DEBUG com.backend.services.CompteService [http-nio-8081-exec-5] L'agent nooom23 pree33 ayant le Username agent a créé le compte: 51991320406316633486 au client avec le Username h
+2021-06-13 16:18:55,461 DEBUG com.backend.services.CompteService [http-nio-8081-exec-9] L'agent nooom23 pree33 ayant le Username agent a supprimé le compte: 51991320406316633486
+2021-06-13 16:19:15,879 DEBUG com.backend.services.ClientService [http-nio-8081-exec-8] L'agent nooom23 pree33 ayant le Username agent a supprimé le client avec le username h
+2021-06-13 16:19:31,112 DEBUG com.backend.services.ClientService [http-nio-8081-exec-5] L'agent nooom23 pree33 ayant le Username agent a supprimé le client avec le username 68568
+2021-06-13 16:19:41,558 DEBUG com.backend.services.CompteService [http-nio-8081-exec-1] L'agent nooom23 pree33 ayant le Username agent a créé le compte: 01188821996661941855 au client avec le Username 5685865
+2021-06-13 16:19:47,562 DEBUG com.backend.services.CompteService [http-nio-8081-exec-5] L'agent nooom23 pree33 ayant le Username agent a supprimé le compte: 01188821996661941855
+2021-06-13 16:20:57,713 DEBUG com.backend.services.CompteService [http-nio-8081-exec-5] L'agent nooom23 pree33 ayant le Username agent a créé le compte: 21760133336875058569 au client avec le Username 5685865
+2021-06-13 16:21:01,585 DEBUG com.backend.services.CompteService [http-nio-8081-exec-8] L'agent nooom23 pree33 ayant le Username agent a supprimé le compte: 21760133336875058569
+2021-06-13 16:25:40,713 DEBUG com.backend.services.CompteService [http-nio-8081-exec-9] L'agent nooom23 pree33 ayant le Username agent a supprimé le compte: 69310218286964539804
+2021-06-13 16:27:51,231 DEBUG com.backend.services.CompteService [http-nio-8081-exec-1] L'agent nooom23 pree33 ayant le Username agent a créé le compte: 05620661955539751367 au client avec le Username 5685865
+2021-06-13 16:29:45,942 DEBUG com.backend.services.CompteService [http-nio-8081-exec-7] L'agent nooom23 pree33 ayant le Username agent a supprimé le compte: 05620661955539751367
+2021-06-13 16:30:53,655 DEBUG com.backend.services.CompteService [http-nio-8081-exec-8] L'agent nooom23 pree33 ayant le Username agent a créé le compte: 03558321720090110221 au client avec le Username 5685865
+2021-06-13 16:30:57,019 DEBUG com.backend.services.CompteService [http-nio-8081-exec-1] L'agent nooom23 pree33 ayant le Username agent a créé le compte: 11283632036194697994 au client avec le Username 5685865
+2021-06-13 16:31:02,575 DEBUG com.backend.services.CompteService [http-nio-8081-exec-4] L'agent nooom23 pree33 ayant le Username agent a supprimé le compte: 03558321720090110221
+2021-06-13 16:31:07,913 DEBUG com.backend.services.CompteService [http-nio-8081-exec-8] L'agent nooom23 pree33 ayant le Username agent a supprimé le compte: 11283632036194697994
+2021-06-13 16:36:07,735 DEBUG com.backend.services.CompteService [http-nio-8081-exec-8] L'agent nooom23 pree33 ayant le Username agent a créé le compte: 34164789328904214058 au client avec le Username 5685865
+2021-06-13 16:36:58,811 DEBUG com.backend.services.CompteService [http-nio-8081-exec-2] L'agent nooom23 pree33 ayant le Username agent a supprimé le compte: 34164789328904214058
+2021-06-13 16:41:29,379 DEBUG com.backend.services.CompteService [http-nio-8081-exec-2] L'agent nooom23 pree33 ayant le Username agent a créé le compte: 93635057152425515241 au client avec le Username 5685865
+2021-06-13 16:41:33,181 DEBUG com.backend.services.CompteService [http-nio-8081-exec-8] L'agent nooom23 pree33 ayant le Username agent a supprimé le compte: 93635057152425515241
+2021-06-13 16:41:52,570 DEBUG com.backend.services.CompteService [http-nio-8081-exec-5] L'agent nooom23 pree33 ayant le Username agent a créé le compte: 33294079544921588616 au client avec le Username 5685865
+2021-06-13 16:41:54,971 DEBUG com.backend.services.CompteService [http-nio-8081-exec-8] L'agent nooom23 pree33 ayant le Username agent a créé le compte: 77320278194067920378 au client avec le Username 5685865
+2021-06-13 16:42:01,093 DEBUG com.backend.services.CompteService [http-nio-8081-exec-1] L'agent nooom23 pree33 ayant le Username agent a supprimé le compte: 77320278194067920378
+2021-06-13 16:42:06,179 DEBUG com.backend.services.CompteService [http-nio-8081-exec-5] L'agent nooom23 pree33 ayant le Username agent a supprimé le compte: 33294079544921588616
+2021-06-13 16:45:53,088 DEBUG com.backend.services.CompteService [http-nio-8081-exec-9] L'agent nooom23 pree33 ayant le Username agent a créé le compte: 48880837514569086743 au client avec le Username 5685865
+2021-06-13 16:45:54,953 DEBUG com.backend.services.CompteService [http-nio-8081-exec-2] L'agent nooom23 pree33 ayant le Username agent a créé le compte: 66189134710772084744 au client avec le Username 5685865
+2021-06-13 16:45:58,255 DEBUG com.backend.services.CompteService [http-nio-8081-exec-5] L'agent nooom23 pree33 ayant le Username agent a supprimé le compte: 66189134710772084744
+2021-06-13 16:46:02,826 DEBUG com.backend.services.CompteService [http-nio-8081-exec-9] L'agent nooom23 pree33 ayant le Username agent a supprimé le compte: 48880837514569086743
+2021-06-13 16:46:17,290 DEBUG com.backend.services.CompteService [http-nio-8081-exec-2] L'agent nooom23 pree33 ayant le Username agent a créé le compte: 55208267840081823392 au client avec le Username 5685865
+2021-06-13 16:46:19,394 DEBUG com.backend.services.CompteService [http-nio-8081-exec-5] L'agent nooom23 pree33 ayant le Username agent a créé le compte: 03439838580219997660 au client avec le Username 5685865
+2021-06-13 16:46:21,855 DEBUG com.backend.services.CompteService [http-nio-8081-exec-8] L'agent nooom23 pree33 ayant le Username agent a supprimé le compte: 55208267840081823392
+2021-06-13 16:46:27,016 DEBUG com.backend.services.CompteService [http-nio-8081-exec-1] L'agent nooom23 pree33 ayant le Username agent a supprimé le compte: 03439838580219997660
+2021-06-13 16:51:38,983 DEBUG com.backend.services.CompteService [http-nio-8081-exec-6] L'agent nooom23 pree33 ayant le Username agent a supprimé le compte: 79721540294937741579
+2021-06-13 16:55:10,065 DEBUG com.backend.services.CompteService [http-nio-8081-exec-3] L'agent nooom23 pree33 ayant le Username agent a supprimé le compte: 70035955003349329144

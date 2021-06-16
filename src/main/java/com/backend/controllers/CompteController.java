@@ -43,7 +43,18 @@ public class CompteController {
 				return service.getCompteByNumero(numero);
 			}
 			
+			@GetMapping("/compte/prop/{prop}")
+			@ResponseStatus(HttpStatus.OK)
+			public List<Compte> getCompteByProp(@PathVariable(name="prop") String prop)
+			{
+				return service.getCompteByNomClient(prop);
+			}
 			
+			@GetMapping("/comptes/all")
+			public ResponseEntity<List<Compte>> getAllClients(){
+				List<Compte> comptes = service.findAllComptes();
+				return new ResponseEntity<>(comptes,HttpStatus.OK);
+			}
 			
 			@GetMapping("/compte/{id}/virements")
 			@ResponseStatus(HttpStatus.OK)
@@ -117,6 +128,14 @@ public class CompteController {
 				service.updateCompte(id,compte);
 			}
 	
+			
+			@PutMapping("/compte/update")
+			public ResponseEntity<Compte> updateCompte(@RequestBody Compte compte){
+				Compte newCompte = service.updateCompteNew(compte);
+				return new ResponseEntity<>(newCompte,HttpStatus.CREATED);
+				
+			}
+		
 		
 			
 		//DELETE

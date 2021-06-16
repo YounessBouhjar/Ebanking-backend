@@ -3,6 +3,7 @@ package com.backend.controllers;
 import java.util.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.backend.entities.*;
@@ -83,7 +84,13 @@ public class ClientController {
 				service.updateClient(id,client);
 			}
 	
-		
+
+			@PutMapping("/client/update")
+			public ResponseEntity<Client> updateClient(@RequestBody Client client){
+				Client newClient = service.updateClientNew(client);
+				return new ResponseEntity<>(newClient,HttpStatus.CREATED);
+				
+			}
 			
 		//DELETE
 			

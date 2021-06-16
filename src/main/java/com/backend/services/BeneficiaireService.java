@@ -14,8 +14,8 @@ public class BeneficiaireService {
 	BeneficiaireRepository beneficiaireRepository;
 	public void addBeneficiaire(Beneficiaire beneficiaire)
 	{
-		if(beneficiaireRepository.findByNumeroCompte(beneficiaire.getNumeroCompte()).isPresent()) 
-			throw new ConflictException("Un bénéficiaire avec le numéro de compte "+beneficiaire.getNumeroCompte()+" existe déjà.");
+		//if(beneficiaireRepository.findByNumeroCompte(beneficiaire.getNumeroCompte()).isPresent()) 
+			//throw new ConflictException("Un bénéficiaire avec le numéro de compte "+beneficiaire.getNumeroCompte()+" existe déjà.");
 		
 		beneficiaireRepository.save(beneficiaire);
 		
@@ -31,7 +31,15 @@ public class BeneficiaireService {
 		return beneficiaire;
 	}
 	
-	
+
+	public Beneficiaire getBeneficiaireByNumeroCompte(String numero)
+	{
+		
+		Beneficiaire beneficiaire = beneficiaireRepository.findByNumeroCompte(numero)
+				.orElseThrow(() -> new NotFoundException("Aucun bénéficiaire avec le compte "+numero+" trouvé."));
+		
+		return beneficiaire;
+	}
 	
 	
 	public void deleteBeneficiaire(Long id)

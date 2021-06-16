@@ -49,7 +49,20 @@ public class CompteService {
 
 	Logger logger = LoggerFactory.getLogger(CompteService.class.getName());
 
-
+	public Compte updateCompteNew(Compte compte) {
+		return rep.save(compte);
+	}
+	
+	public List<Compte> findAllComptes(){
+		return rep.findAll();
+	}
+	
+	public List<Compte> getCompteByNomClient(String prop)
+	{
+		List<Compte> compte =  rep.findByProprietaire(prop);
+	
+		return compte;
+	}
 
 	public List<Compte> getComptes(Long id)  throws NotFoundException
 	{
@@ -159,7 +172,7 @@ public class CompteService {
 
 		rep.save(compte);
 
-		contratService.createContrat(compte,client);
+		//contratService.createContrat(compte,client);
 
 		logger.debug("L'agent "+agent.getNom()+" "+agent.getPrenom()+" ayant le Username "+agent.getUsername()
 		+" a créé le compte: "+compte.getNumero()+" au client avec le Username "+client.getUsername());

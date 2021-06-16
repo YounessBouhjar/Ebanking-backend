@@ -1,5 +1,6 @@
 package com.backend.repositories;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -11,6 +12,7 @@ public interface CompteRepository extends JpaRepository<Compte, Long> {
 
 	Optional<Compte> findByNumero(String numero);
 	
-	
+	@Query("SELECT c FROM Compte c WHERE c.proprietaire.nom = ?1")
+	List<Compte> findByProprietaire(String proprietaire);
 
 }

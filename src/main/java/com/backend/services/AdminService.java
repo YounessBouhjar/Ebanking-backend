@@ -80,7 +80,7 @@ public class AdminService {
 		
 		Admin user = getByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
 		logger.debug("L'administrateur "+user.getNom()+" "+user.getPrenom()+" ayant le Username "+user.getUsername()+" a créé l'administrateur avec le username "+admin.getUsername());
-		
+		 
 	}
 	
 	public void updateAdmin(Long id,Admin admin)
