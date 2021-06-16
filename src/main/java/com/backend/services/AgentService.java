@@ -51,8 +51,13 @@ public class AgentService {
 		return rep.findByUsername(username).orElseThrow(() -> new NotFoundException("Aucun agent avec le username "+username+" trouvé"));
 	}
 	
-	
-	
+	public List<Appointment> getAppointments(Long id) throws NotFoundException
+	{
+		Agent agent= rep.findById(id).orElseThrow(() -> new NotFoundException("Aucun agent avec l'id "+id+" trouvé"));
+		if(agent.getAppointments().isEmpty()) throw new NotFoundException("Cet agent n'a aucun rendez-vous.");
+		return agent.getAppointments();
+		
+	}	
 	
 	public void addAgent(Agent agent) throws AlreadyExistsException
 	{

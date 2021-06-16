@@ -37,6 +37,8 @@ public class AppointmentService {
 	public Appointment addAppointment(Appointment appointment) {
 		Client client=clientService.getByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
 		appointment.setClient(client);
+		Agent agent=client.getCreationAgent();
+		appointment.setAgent(agent);
 		appointment.setDateDemande(LocalDateTime.now());
 		return 	appointmentRep.save(appointment);
 	}

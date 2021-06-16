@@ -20,6 +20,8 @@ public @Data class Appointment {
 	@JoinColumn(name="APPOINTMENT_CLIENT")
 	@ManyToOne
 	Client client;
+	@ManyToOne
+	Agent agent;
 	String motif;
 	String status;
 	@Column(nullable=true)

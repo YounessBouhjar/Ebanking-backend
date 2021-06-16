@@ -94,11 +94,11 @@ public class ClientService {
 		client.setPassword(new BCryptPasswordEncoder().encode(client.getPassword()));
 		client.setRole("Client");
 		
-		//Agent agent = agentService.getByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
+		Agent agent = agentService.getByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
 		
-		//client.setCreationAgent(agent);
-		//Agence agence = agenceService.getAgences(agent.getAgence().getId()).get(0);
-		//client.setAgence(agence);
+		client.setCreationAgent(agent);
+		Agence agence = agenceService.getAgences(agent.getAgence().getId()).get(0);
+		client.setAgence(agence);
 		client.setEstOperateur("Faux");
 		
 		rep.save(client);

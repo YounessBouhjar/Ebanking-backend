@@ -1,6 +1,10 @@
 package com.backend.entities;
 
+import java.util.List;
+
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.*;
 
@@ -27,5 +31,11 @@ public @Data class Agent extends Utilisateur{
 	@JoinColumn(name="AGENCE_AGENT")
 	@ManyToOne
 	Agence agence;
+	
+	@JsonIgnore
+	@Column(name="APPOINTMENTS_AGENT")
+	@OneToMany(mappedBy="agent",cascade=CascadeType.ALL)
+	List<Appointment> appointments;
+	
 	
 }
