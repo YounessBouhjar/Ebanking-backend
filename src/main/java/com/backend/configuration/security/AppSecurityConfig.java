@@ -104,7 +104,7 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 			.and()
 			.authorizeRequests()
 			//ADMIN
-			.antMatchers(HttpMethod.GET,"/admins").hasRole("Admin")		//afficher les admins
+			.antMatchers(HttpMethod.GET,"/admins").permitAll()		//afficher les admins
 			.antMatchers(HttpMethod.GET,"/admin/username/{username}").hasRole("Admin")		//admin par username
 			.antMatchers(HttpMethod.POST,"/admins").hasRole("Admin")		//creer les admins
 			.antMatchers(HttpMethod.PUT,"/admin/{id}").hasRole("Admin")	//modifier un admin
@@ -137,6 +137,9 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers(HttpMethod.GET,"/agence/{id}/clients").permitAll()	//afficher clients
 			.antMatchers(HttpMethod.PUT,"/client/{id}").permitAll()	//modifier client
 			.antMatchers(HttpMethod.DELETE,"/client/{id}").permitAll()	//supprimer client
+			
+			.antMatchers(HttpMethod.GET,"/client/{id}/appointments").permitAll()		//afficher client
+			
 			//BENEF
 			.antMatchers(HttpMethod.GET,"/client/{id}/benef").permitAll()	// afficher les benef du client id
 			.antMatchers(HttpMethod.POST,"/beneficiaire").permitAll()
@@ -168,6 +171,11 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers(HttpMethod.GET,"/operationPDF/{id}").hasRole("Agent")	// Reçu operation PDF
 			.antMatchers(HttpMethod.POST,"/operations").hasRole("Agent")	//creer operation
 			
+			.antMatchers(HttpMethod.GET,"/appointments").permitAll()	//afficher appointment
+			.antMatchers(HttpMethod.POST,"/addAppointment").permitAll()	//creer appointment
+			.antMatchers(HttpMethod.PUT,"/appointment/{id}").permitAll()	//modifier appointment
+			.antMatchers(HttpMethod.DELETE,"/appointment/{id}").permitAll()	//modifier appointment
+
 			.and()
 			.httpBasic()
 			.and()

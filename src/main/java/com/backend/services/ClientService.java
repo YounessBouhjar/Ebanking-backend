@@ -66,7 +66,13 @@ public class ClientService {
 		return client.getComptes();
 		
 	}
-	
+	public List<Appointment> getAppointments(Long id) throws NotFoundException
+	{
+		Client client= rep.findById(id).orElseThrow(() -> new NotFoundException("Aucun client avec l'id "+id+" trouvé"));
+		if(client.getAppointments().isEmpty()) throw new NotFoundException("Cet client n'a aucun rendez-vous.");
+		return client.getAppointments();
+		
+	}
 	
 	
 	public void addClient(Client client) throws AlreadyExistsException
