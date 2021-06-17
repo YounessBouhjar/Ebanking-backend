@@ -186,6 +186,7 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 			
 
 			//VIREMENT MULTIPLE
+			.antMatchers(HttpMethod.GET,"/virement/multiple/client/{id}").permitAll()	//afficher virement par client
 			.antMatchers(HttpMethod.GET,"/virement/multiple").permitAll()	//afficher virements
 			.antMatchers(HttpMethod.GET,"/virement/multiple/{id}").permitAll() //afficher virement specifique
 			.antMatchers(HttpMethod.POST,"/virement/multiple").permitAll()	//poster virements

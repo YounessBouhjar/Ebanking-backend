@@ -62,4 +62,10 @@ public @Data class Client  extends Utilisateur{
 	@OneToMany(mappedBy="client",cascade=CascadeType.ALL)
 	List<Appointment> appointments;
 	
+	
+	@JsonIgnore
+	@Column(name="VM_CLIENT")
+	@OneToMany(mappedBy="client",cascade=CascadeType.ALL)
+	List<VirementMultiple> virementMultiple;
+	
 }

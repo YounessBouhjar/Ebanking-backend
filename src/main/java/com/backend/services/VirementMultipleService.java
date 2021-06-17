@@ -2,6 +2,7 @@ package com.backend.services;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import javax.transaction.Transactional;
@@ -9,13 +10,17 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import com.backend.entities.Beneficiaire;
+import com.backend.entities.Client;
 import com.backend.entities.Compte;
 import com.backend.entities.VirementMultiple;
 import com.backend.entities.VirementMultipleBeneficiaire;
 import com.backend.exceptions.AlreadyExistsException;
+import com.backend.exceptions.NotFoundException;
+import com.backend.repositories.ClientRepository;
 import com.backend.repositories.VirementMultipleRepository;
 
 @Service
@@ -42,6 +47,8 @@ public class VirementMultipleService {
     @Transactional
     public VirementMultiple saveVirementMultiple(VirementMultiple virement) throws Exception, AlreadyExistsException
 	{
+    	Client client=clientService.getByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
+		virement.setClient(client);
     	System.out.println("$$$$$$$$$$$------- " + virement.getDebiteur().getId() + " -------$$$$$$$$$");
 		Compte debiteur = compteService.getComptes(virement.getDebiteur().getId()).get(0);
 		Compte creancier = new Compte();
@@ -70,6 +77,7 @@ public class VirementMultipleService {
 
     	System.out.println("$$$$$$$$$$$------- " + 2 + " -------$$$$$$$$$");
     	VirementMultiple vm = new VirementMultiple();
+		vm.setClient(client);
     	vm.setDate(virement.getDate());
     	vm.setDebiteur(debiteur);
     	vm.setSommeEnv(virement.getSommeEnv());
@@ -98,5 +106,15 @@ public class VirementMultipleService {
 	public VirementMultiple getVirementMultipleById(Long id) {
 		// TODO Auto-generated method stub
 		return virementMultipleRepository.findById(id).get();
+	}
+	
+	@Autowired
+	ClientRepository rep;
+	public List<VirementMultiple> getVirementMultipleByClient(Long id) throws NotFoundException
+	{
+		Client client= rep.findById(id).orElseThrow(() -> new NotFoundException("Aucun client avec l'id "+id+" trouvé"));
+		if(client.getVirementMultiple().isEmpty()) throw new NotFoundException("Cet client n'a aucun virement multiple.");
+		return client.getVirementMultiple();
+		
 	}
 }

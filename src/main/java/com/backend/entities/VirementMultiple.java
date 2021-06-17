@@ -21,4 +21,7 @@ public class VirementMultiple extends VirementSuperClass {
     
     @OneToMany(mappedBy = "virementMultiple", cascade = CascadeType.ALL)
     private Collection<VirementMultipleBeneficiaire> vmb = new ArrayList<>();
+    
+    @ManyToOne
+	Client client;
 }
