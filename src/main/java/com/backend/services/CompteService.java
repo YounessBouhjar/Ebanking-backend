@@ -36,8 +36,7 @@ public class CompteService {
 	@Autowired
 	AgentService agentService;
 
-	@Autowired
-	ContratService contratService;
+	
 
 	@Autowired
 	ClientService clientService;
@@ -133,27 +132,6 @@ public class CompteService {
 	}
 
 
-	public List<Recharge> getRecharges(Long id)  throws NotFoundException
-	{
-		Compte compte= rep.findById(id).orElseThrow(() -> new NotFoundException("Aucun compte avec l'id "+id+" trouvé"));
-
-		List<Recharge> recharges = compte.getRecharges();
-		if(recharges.isEmpty()) throw new NotFoundException("Aucune recharge effectutée");
-
-		return recharges;
-	}
-	
-	public List<Operation> getOperations(Long id)  throws NotFoundException
-	{
-		Compte compte= rep.findById(id).orElseThrow(() -> new NotFoundException("Aucun compte avec l'id "+id+" trouvé"));
-
-		List<Operation> operations = compte.getOperations();
-		if(operations.isEmpty()) throw new NotFoundException("Aucune opérartion effectutée");
-
-		return operations;
-	}
-
-
 
 	public void addCompte(Compte compte) throws AlreadyExistsException, DocumentException, FileNotFoundException
 	{
@@ -212,27 +190,7 @@ public class CompteService {
 	
 	
 	
-	public ResponseEntity<InputStreamResource> getContratPDF(Long id) throws IOException
-	{
-		Compte compte = getComptes(id).get(0);
-		String fileName = "compte_"+compte.getNumero()+"_"+compte.getCreationDate().withNano(0).toString().replace(':', '-')+".pdf";
-		System.out.println("Download : " + fileName);
-		Path path = FileSystems.getDefault().getPath("").toAbsolutePath();
-		System.out.println("Download :hh " );
-		PathResource pdfFile = new PathResource(path+"\\src\\main\\resources\\contrats\\"+fileName);
-		 
-		
-		
-		  ResponseEntity<InputStreamResource> response = new ResponseEntity<InputStreamResource>(
-		    new InputStreamResource(pdfFile.getInputStream()), HttpStatus.OK);
-		  
-		  Agent agent = agentService.getByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
-		  logger.debug("L'agent "+agent.getNom()+" "+agent.getPrenom()+" ayant le Username "+agent.getUsername()+" a téléchargé le fichier "+fileName+" à la date: "+LocalDateTime.now());
-		  
-		  return response;
 
-	}
-	
 	
 	public String generateNumCompte()
 	{

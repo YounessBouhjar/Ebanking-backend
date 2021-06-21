@@ -35,11 +35,6 @@ public class VirementMultipleService {
 	@Autowired
 	ClientService clientService;
 	
-	@Autowired
-	RecuVirementService recuService;
-	
-	@Autowired
-	DeviseService deviseService;
 
     @Autowired
     BeneficiaireService benificiaireService;

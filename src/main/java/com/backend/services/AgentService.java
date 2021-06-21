@@ -27,8 +27,7 @@ public class AgentService {
 	@Autowired
 	AdminService adminService;
 	
-	@Autowired
-	EmailServiceImpl emailService;
+	
 	
 	Logger logger = LoggerFactory.getLogger(AgentService.class.getName());
 	
@@ -83,7 +82,7 @@ public class AgentService {
 		if(!agent.getEmail().isEmpty() && agent.getEmail()!=null)
 		{
 			agent.setPassword(password);
-			emailService.sendAuthenticationInfos(agent);
+	//		emailService.sendAuthenticationInfos(agent);
 		}
 		
 		logger.debug("L'administrateur "+admin.getNom()+" "+admin.getPrenom()+" ayant le Username "+admin.getUsername()+" a créé l'agent avec le username "+agent.getUsername());
@@ -114,7 +113,7 @@ public class AgentService {
 		
 		if(agent.getPassword()!=null && !agent.getPassword().isEmpty()) updated.setPassword(agent.getPassword());
 		else updated.setPassword(null);
-		emailService.sendAuthenticationInfos(updated);
+	//	emailService.sendAuthenticationInfos(updated);
 		
 		Admin admin = adminService.getByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
 		logger.debug("L'administrateur "+admin.getNom()+" "+admin.getPrenom()+" ayant le Username "+admin.getUsername()+" a modifié l'agent avec le username "+updated.getUsername());

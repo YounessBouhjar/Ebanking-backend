@@ -36,13 +36,7 @@ public class VirementService {
 	@Autowired
 	ClientService clientService;
 	
-	@Autowired
-	RecuVirementService recuService;
-	
-	@Autowired
-	DeviseService deviseService;
-	
-	Logger logger = LoggerFactory.getLogger(RechargeService.class.getName());
+
 	
 	
 	public List<Virement> getVirements(Long id)  throws NotFoundException
@@ -115,7 +109,7 @@ public class VirementService {
 		    new InputStreamResource(pdfFile.getInputStream()), HttpStatus.OK);
 		  
 		  Client client = clientService.getByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
-		logger.debug("Le client "+client.getNom()+" "+client.getPrenom()+" ayant le Username "+client.getUsername()+" a téléchargé le fichier "+fileName+" à la date: "+LocalDateTime.now());
+	//	logger.debug("Le client "+client.getNom()+" "+client.getPrenom()+" ayant le Username "+client.getUsername()+" a téléchargé le fichier "+fileName+" à la date: "+LocalDateTime.now());
 			
 		  
 		  return response;

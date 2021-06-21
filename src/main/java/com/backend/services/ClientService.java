@@ -29,8 +29,7 @@ public class ClientService {
 	@Autowired
 	AgenceService agenceService;
 	
-	@Autowired
-	EmailServiceImpl emailService;
+
 	
 	
 	Logger logger = LoggerFactory.getLogger(ClientService.class.getName());
@@ -139,7 +138,7 @@ public class ClientService {
 		
 		if(client.getPassword()!=null && !client.getPassword().isEmpty()) updated.setPassword(client.getPassword());
 		else updated.setPassword(null);
-		emailService.sendAuthenticationInfos(updated);
+	//	emailService.sendAuthenticationInfos(updated);
 		
 		Agent agent = agentService.getByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
 		logger.debug("L'agent "+agent.getNom()+" "+agent.getPrenom()+" ayant le Username "+agent.getUsername()+" a modifié le client avec le username "+updated.getUsername());

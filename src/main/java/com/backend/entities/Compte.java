@@ -37,10 +37,7 @@ public @Data class Compte {
 	
 	@Column(name="SOLDE_COMPTE")
 	double solde;
-	
-	@ManyToOne
-	@JoinColumn(name="DEVISE_COMPTE")
-	Devise devise;
+
 	
 	@Column(name="CREATION_DATE_COMPTE")
 	LocalDateTime creationDate;
@@ -64,16 +61,5 @@ public @Data class Compte {
 	@Column(name="VIREMENTS_RECUS_COMPTE")
 	@OneToMany(mappedBy="creancier",cascade=CascadeType.ALL)
 	List<Virement> virementsRecus;
-	
-	@JsonIgnore
-	@Column(name="RECHARGES_COMPTE")
-	@OneToMany(mappedBy="compte",cascade=CascadeType.ALL)
-	List<Recharge> recharges;
-	
-	
-	@JsonIgnore
-	@Column(name="OPERATIONS_COMPTE")
-	@OneToMany(mappedBy="compte",cascade=CascadeType.ALL)
-	List<Operation> operations;
 
 }

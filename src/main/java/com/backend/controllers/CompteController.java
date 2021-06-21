@@ -81,29 +81,14 @@ public class CompteController {
 			
 			
 			
-			@GetMapping("/compte/{id}/recharges")
-			@ResponseStatus(HttpStatus.OK)
-			public List<Recharge> getRecharges(@PathVariable(name="id") Long id) throws NotFoundException
-			{
-				return service.getRecharges(id);
-			}
+	
 			
-			
-			@GetMapping("/compte/{id}/operations")
-			@ResponseStatus(HttpStatus.OK)
-			public List<Operation> getOperations(@PathVariable(name="id") Long id) throws NotFoundException
-			{
-				return service.getOperations(id);
-			}
-			
-			
-			
-			@GetMapping(value="/contratPDF/{id}", produces = "application/pdf")
-			@ResponseStatus(HttpStatus.OK)
-			public ResponseEntity<InputStreamResource> getContratPDF(@PathVariable(name="id") Long id) throws IOException
-			{
-				return service.getContratPDF(id);
-			}
+//			@GetMapping(value="/contratPDF/{id}", produces = "application/pdf")
+//			@ResponseStatus(HttpStatus.OK)
+//			public ResponseEntity<InputStreamResource> getContratPDF(@PathVariable(name="id") Long id) throws IOException
+//			{
+//				return service.getContratPDF(id);
+//			}
 			
 			
 		 

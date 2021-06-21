@@ -18,8 +18,14 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.backend.entities.Admin;
+import com.backend.entities.Agence;
+import com.backend.entities.Agent;
+import com.backend.entities.Client;
 import com.backend.exceptions.NotFoundException;
 import com.backend.services.AdminService;
+import com.backend.services.AgenceService;
+import com.backend.services.AgentService;
+import com.backend.services.ClientService;
 
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
@@ -33,6 +39,15 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	AdminService adminService;
 	
+	@Autowired
+	AgentService agentService;
+	
+	@Autowired
+	ClientService clientService;
+	
+	@Autowired
+	AgenceService agenceService;
+	
 	UserPrincipalDetailsService service;
 	
 	@Autowired
@@ -43,17 +58,42 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@PostConstruct
 	public void init() {
+		
+		
+//		   Agence agence = new Agence();
+//	       agence.setNom("massira");
+//	       agence.setCreationAdmin(admin);
+//	       agenceService.addAgence(agence);
+//
+//       Agent agent = new Agent();
+//       agent.setUsername("agent");
+//       agent.setPassword("agent");
+//       agent.setAgence(agence);
+//       agentService.addAgent(agent);
+//
+//
+//       Client c = new Client();
+//        c.setUsername("client");
+//        c.setPassword("client");
+//        c.setAgence(agence);
+//        c.setCreationAgent(agent);
+//        
+//        clientService.addClient(c);
+        
 		List<Admin>  currentAdminList= new ArrayList<Admin>();
 		try {
 		currentAdminList = adminService.getAdmins(null);
 		} catch (NotFoundException e) {
+		
+	        
 			Admin    admin    = new Admin();
 	        admin.setUsername("admin");
 	        admin.setPassword("admin");
 	        admin.setEmail("ensa.backend@gmail.com");
 	        admin.setRole("Admin");
 	        adminService.addAdmin(admin);
-			
+	     
+	        
 		}
 
 	    

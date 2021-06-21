@@ -23,8 +23,7 @@ public class AdminService {
 	@Autowired
 	UserRepository userRep;
 	
-	@Autowired
-	EmailServiceImpl emailService;
+	
 	
 	Logger logger = LoggerFactory.getLogger(AdminService.class.getName());
 	
@@ -75,7 +74,7 @@ public class AdminService {
 		if(!admin.getEmail().isEmpty() && admin.getEmail()!=null)
 		{
 			admin.setPassword(password);
-			emailService.sendAuthenticationInfos(admin);
+		//	emailService.sendAuthenticationInfos(admin);
 		}
 		
 		Admin user = getByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
@@ -107,7 +106,7 @@ public class AdminService {
 		
 		if(admin.getPassword()!=null && !admin.getPassword().isEmpty()) updated.setPassword(admin.getPassword());
 		else updated.setPassword(null);
-		emailService.sendAuthenticationInfos(updated);
+	//	emailService.sendAuthenticationInfos(updated);
 		
 		Admin user = getByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
 		logger.debug("L'administrateur "+user.getNom()+" "+user.getPrenom()+" ayant le Username "+user.getUsername()+" a modifié l'administrateur avec le username "+updated.getUsername());
