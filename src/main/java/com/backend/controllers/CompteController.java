@@ -50,6 +50,13 @@ public class CompteController {
 				return service.getCompteByNomClient(prop);
 			}
 			
+			@GetMapping("/compte/agent/{agent}")
+			@ResponseStatus(HttpStatus.OK)
+			public List<Compte> getCompteByAg(@PathVariable(name="agent") String agent)
+			{
+				return service.getCompteByAgent(agent);
+			}
+			
 			@GetMapping("/comptes/all")
 			public ResponseEntity<List<Compte>> getAllClients(){
 				List<Compte> comptes = service.findAllComptes();

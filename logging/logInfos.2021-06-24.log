@@ -1,0 +1,8 @@
+2021-06-24 00:09:16,009 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on DESKTOP-COQUTAB with PID 364 (C:\Users\imran\OneDrive\Desktop\Projet E-Banking\ebank-back\target\classes started by imran in C:\Users\imran\OneDrive\Desktop\Projet E-Banking\ebank-back)
+2021-06-24 00:09:16,026 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2021-06-24 00:09:16,027 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
+2021-06-24 00:09:50,521 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 35.177 seconds (JVM running for 36.007)
+2021-06-24 00:09:57,421 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on DESKTOP-COQUTAB with PID 9600 (C:\Users\imran\OneDrive\Desktop\Projet E-Banking\ebank-back\target\classes started by imran in C:\Users\imran\OneDrive\Desktop\Projet E-Banking\ebank-back)
+2021-06-24 00:09:57,428 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2021-06-24 00:09:57,429 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
+2021-06-24 00:10:32,385 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 35.611 seconds (JVM running for 36.542)
