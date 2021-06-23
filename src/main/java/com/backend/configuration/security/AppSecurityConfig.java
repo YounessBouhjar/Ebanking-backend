@@ -155,9 +155,9 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers(HttpMethod.PUT,"/agent/{id}").hasRole("Admin")	//modifier agent
 			.antMatchers(HttpMethod.DELETE,"/agent/{id}").hasRole("Admin")	//supprimer agent
 			.antMatchers(HttpMethod.GET,"/agence/{id}/agents").hasRole("Admin")	//afficher agents
-			.antMatchers(HttpMethod.GET,"/agent/username/{username}").permitAll()		//agent par username
-			.antMatchers(HttpMethod.GET,"/agents").permitAll()	//afficher agent
-			.antMatchers(HttpMethod.GET,"/agent/{id}/appointments").permitAll()	//afficher appointment agent
+			.antMatchers(HttpMethod.GET,"/agent/username/{username}").hasAnyRole("Admin","Agent")		//agent par username
+			.antMatchers(HttpMethod.GET,"/agents").hasRole("Admin")	//afficher agent
+			.antMatchers(HttpMethod.GET,"/agent/{id}/appointments").hasRole("Agent")	//afficher appointment agent
 
 			//AGENCE
 			.antMatchers(HttpMethod.GET,"/agences").hasAnyRole("Admin","Agent")		//afficher agences
@@ -172,64 +172,57 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers(HttpMethod.DELETE,"/devise/{code}").hasRole("Admin")	//supprimer devise
 
 			//CLIENT
-			.antMatchers(HttpMethod.POST,"/clients").permitAll()	//creer client
-			.antMatchers(HttpMethod.GET,"/clients").permitAll()		//afficher client
-			.antMatchers(HttpMethod.GET,"/client/username/{username}").permitAll()		//client par username
-			.antMatchers(HttpMethod.GET,"/agence/{id}/clients").permitAll()	//afficher clients
-			.antMatchers(HttpMethod.PUT,"/client/{id}").permitAll()	//modifier client
-			.antMatchers(HttpMethod.DELETE,"/client/{id}").permitAll()	//supprimer client
+			.antMatchers(HttpMethod.POST,"/clients").hasRole("Agent")	//creer client
+			.antMatchers(HttpMethod.GET,"/clients").hasRole("Agent")	//afficher client
+			.antMatchers(HttpMethod.GET,"/client/username/{username}").hasAnyRole("Agent","Client")		//client par username
+			.antMatchers(HttpMethod.GET,"/agence/{id}/clients").hasRole("Agent")	//afficher clients
+			.antMatchers(HttpMethod.PUT,"/client/{id}").hasRole("Agent")	//modifier client
+			.antMatchers(HttpMethod.DELETE,"/client/{id}").hasRole("Agent")	//supprimer client
 			
-			.antMatchers(HttpMethod.GET,"/client/{id}/appointments").permitAll()		//afficher client
+			.antMatchers(HttpMethod.GET,"/client/{id}/appointments").hasRole("Client")		//afficher client
 			
 			//BENEF
-			.antMatchers(HttpMethod.GET,"/client/{id}/benef").permitAll()	// afficher les benef du client id
-			.antMatchers(HttpMethod.POST,"/beneficiaire").permitAll()
-			.antMatchers(HttpMethod.GET,"/beneficiaire/{id}").permitAll()
-			.antMatchers(HttpMethod.DELETE,"/beneficiaire/{id}").permitAll()
+			.antMatchers(HttpMethod.GET,"/client/{id}/benef").hasAnyRole("Agent","Client")	// afficher les benef du client id
+			.antMatchers(HttpMethod.POST,"/beneficiaire").hasRole("Client")	
+			.antMatchers(HttpMethod.GET,"/beneficiaire/{id}").hasRole("Client")	
+			.antMatchers(HttpMethod.DELETE,"/beneficiaire/{id}").hasRole("Client")	
 			//COMPTE
 			.antMatchers(HttpMethod.GET,"/client/{id}/comptes").hasAnyRole("Agent","Client")	//afficher comptes
 			.antMatchers(HttpMethod.GET,"/comptes/all").hasAnyRole("Agent","Client")	//afficher compte
-			.antMatchers(HttpMethod.GET,"/comptes").hasRole("Agent")	//afficher compte
+			.antMatchers(HttpMethod.GET,"/comptes").hasAnyRole("Agent","Client")	//afficher compte
 			.antMatchers(HttpMethod.GET,"/compte/prop/{prop}").permitAll()	
 
 			.antMatchers(HttpMethod.POST,"/comptes").hasRole("Agent")	//creer compte
 			.antMatchers(HttpMethod.PUT,"/compte/{id}").hasRole("Agent")	//modifier compte
 			.antMatchers(HttpMethod.DELETE,"/compte/{id}").hasRole("Agent")//supprimer compte
 			.antMatchers(HttpMethod.GET,"/compte/{numero}").hasRole("Client")	//afficher compte
-			.antMatchers(HttpMethod.GET,"/contratPDF/{id}").hasRole("Client")	//Contrat PDF
 			
 			//VIREMENT ET RECHARGE
-			.antMatchers(HttpMethod.GET,"/compte/{id}/virements").permitAll()	//afficher virements
-			.antMatchers(HttpMethod.GET,"/compte/{id}/virementsEnvoyes").permitAll()//afficher virement envoyes
-			.antMatchers(HttpMethod.GET,"/compte/{id}/virementsRecus").permitAll()//afficher virement recus
-			.antMatchers(HttpMethod.GET,"/compte/{id}/recharges").permitAll()	//afficher recharges
-			.antMatchers(HttpMethod.GET,"/virements").permitAll()	//afficher virement
-			.antMatchers(HttpMethod.GET,"/virementPDF/{id}").permitAll()// Reçu virement PDF
-			.antMatchers(HttpMethod.POST,"/virements").permitAll()//creer virement
-			.antMatchers(HttpMethod.GET,"/recharges").permitAll()//afficher recharge
-			.antMatchers(HttpMethod.POST,"/recharges").permitAll()	//creer recharge
-			
+			.antMatchers(HttpMethod.GET,"/compte/{id}/virements").hasRole("Client")	//afficher virements
+			.antMatchers(HttpMethod.GET,"/compte/{id}/virementsEnvoyes").hasRole("Client")//afficher virement envoyes
+			.antMatchers(HttpMethod.GET,"/compte/{id}/virementsRecus").hasRole("Client")//afficher virement recus
+			.antMatchers(HttpMethod.GET,"/compte/{id}/recharges").hasRole("Client")	//afficher recharges
+			.antMatchers(HttpMethod.GET,"/virements").hasRole("Client")	//afficher virement
+			.antMatchers(HttpMethod.POST,"/virements").hasRole("Client")//creer virement
+
 			//OPERATIONS (RETRAIT ET VERSEMENT)
 			.antMatchers(HttpMethod.GET,"/operations").hasAnyRole("Agent","Client")	//afficher operation
 			.antMatchers(HttpMethod.GET,"/compte/{id}/operations").hasAnyRole("Agent","Client")	//afficher operations
-			.antMatchers(HttpMethod.GET,"/operationPDF/{id}").hasRole("Agent")	// Reçu operation PDF
 			.antMatchers(HttpMethod.POST,"/operations").hasRole("Agent")	//creer operation
 
 			//APPOINTMENTS
-
-
-			.antMatchers(HttpMethod.GET,"/appointments").permitAll()	//afficher appointment
-			.antMatchers(HttpMethod.POST,"/addAppointment").permitAll()	//creer appointment
-			.antMatchers(HttpMethod.PUT,"/appointment/{id}").permitAll()	//modifier appointment
-			.antMatchers(HttpMethod.DELETE,"/appointment/{id}").permitAll()	//modifier appointment
+		//	.antMatchers(HttpMethod.GET,"/appointments").hasAnyRole("Agent","Client")	//afficher appointment
+			.antMatchers(HttpMethod.POST,"/addAppointment").hasRole("Client")	//creer appointment
+			.antMatchers(HttpMethod.PUT,"/appointment/{id}").hasRole("Agent")	//modifier appointment
+			.antMatchers(HttpMethod.DELETE,"/appointment/{id}").hasRole("Agent")	//supprimer appointment
 
 			
 
 			//VIREMENT MULTIPLE
-			.antMatchers(HttpMethod.GET,"/virement/multiple/client/{id}").permitAll()	//afficher virement par client
-			.antMatchers(HttpMethod.GET,"/virement/multiple").permitAll()	//afficher virements
-			.antMatchers(HttpMethod.GET,"/virement/multiple/{id}").permitAll() //afficher virement specifique
-			.antMatchers(HttpMethod.POST,"/virement/multiple").permitAll()	//poster virements
+			.antMatchers(HttpMethod.GET,"/virement/multiple/client/{id}").hasRole("Client")	//afficher virement par client
+			.antMatchers(HttpMethod.GET,"/virement/multiple").hasRole("Client")	//afficher virements
+			.antMatchers(HttpMethod.GET,"/virement/multiple/{id}").hasRole("Client") //afficher virement specifique
+			.antMatchers(HttpMethod.POST,"/virement/multiple").hasRole("Client")	//poster virements
 			
 			
 			.and()

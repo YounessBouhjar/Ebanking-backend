@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
-Built-By: soufiane
-Build-Jdk: 15.0.1
 Implementation-Title: ensa-back
 Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: youne
 Implementation-Vendor-Id: com.backend
-Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
- -starter-parent/ensa-back
+Build-Jdk: 1.8.0_291
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/ensa-back
 Created-By: Maven Integration for Eclipse
 

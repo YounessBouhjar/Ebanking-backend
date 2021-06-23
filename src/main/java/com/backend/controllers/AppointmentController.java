@@ -29,7 +29,7 @@ public class AppointmentController {
 	public AppointmentController(AppointmentService appointmentService) {
 		this.appointmentService=appointmentService;
 	}
-	
+	/*	
 	//GET
 	@GetMapping("/appointments")
 	@ResponseStatus(HttpStatus.OK)
@@ -38,7 +38,7 @@ public class AppointmentController {
 		List<Appointment> appointments = appointmentService.getAppointments();
 		return new ResponseEntity<>(appointments,HttpStatus.OK);
 	}	
-	
+*/	
 	//GET
 	@PostMapping("/addAppointment")
 	@ResponseStatus(HttpStatus.OK)
