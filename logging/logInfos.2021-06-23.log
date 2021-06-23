@@ -660,3 +660,4 @@ java.lang.Exception: Vous n'avez pas de solde suffisant !
 2021-06-23 20:43:22,901 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 20340 (C:\Users\youne\Desktop\ebankingfinal\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\ebankingfinal\ebank-back)
 2021-06-23 20:43:22,929 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
 2021-06-23 20:43:22,930 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
+2021-06-23 20:44:16,041 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 53.743 seconds (JVM running for 54.574)
