@@ -14,5 +14,8 @@ public interface CompteRepository extends JpaRepository<Compte, Long> {
 	
 	@Query("SELECT c FROM Compte c WHERE c.proprietaire.nom = ?1")
 	List<Compte> findByProprietaire(String proprietaire);
+	
+	@Query("SELECT c FROM Compte c WHERE c.creationAgent.username = ?1")
+	List<Compte> findByCreationAgent(String agent);
 
 }

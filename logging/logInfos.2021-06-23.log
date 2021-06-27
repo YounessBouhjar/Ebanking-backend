@@ -660,4 +660,17 @@ java.lang.Exception: Vous n'avez pas de solde suffisant !
 2021-06-23 20:43:22,901 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 20340 (C:\Users\youne\Desktop\ebankingfinal\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\ebankingfinal\ebank-back)
 2021-06-23 20:43:22,929 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
 2021-06-23 20:43:22,930 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
+<<<<<<< HEAD
+2021-06-23 23:22:30,882 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on DESKTOP-COQUTAB with PID 10092 (C:\Users\imran\OneDrive\Desktop\Projet E-Banking\ebank-back\target\classes started by imran in C:\Users\imran\OneDrive\Desktop\Projet E-Banking\ebank-back)
+2021-06-23 23:22:30,887 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2021-06-23 23:22:30,888 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
+2021-06-23 23:23:46,107 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on DESKTOP-COQUTAB with PID 5500 (C:\Users\imran\OneDrive\Desktop\Projet E-Banking\ebank-back\target\classes started by imran in C:\Users\imran\OneDrive\Desktop\Projet E-Banking\ebank-back)
+2021-06-23 23:23:46,114 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2021-06-23 23:23:46,116 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
+2021-06-23 23:24:25,993 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 40.608 seconds (JVM running for 41.517)
+2021-06-23 23:33:04,522 DEBUG com.backend.services.CompteService [http-nio-8091-exec-7] L'agent imrane bendaoud ayant le Username imrane a créé le compte: 98468412859333218808 au client avec le Username p
+2021-06-23 23:38:28,049 DEBUG com.backend.services.CompteService [http-nio-8091-exec-6] L'agent imrane bendaoud ayant le Username imrane a modifié le compte: 98468412859333218808
+2021-06-23 23:49:54,717 DEBUG com.backend.services.CompteService [http-nio-8091-exec-3] L'agent soufiane souf ayant le Username soufiane a créé le compte: 30727359971643534935 au client avec le Username imrane1
+=======
 2021-06-23 20:44:16,041 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 53.743 seconds (JVM running for 54.574)
+>>>>>>> 3ec60595ee17d63a8e274e411378dee5cc9032f7

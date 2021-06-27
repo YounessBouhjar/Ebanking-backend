@@ -62,6 +62,13 @@ public class CompteService {
 	
 		return compte;
 	}
+	
+	public List<Compte> getCompteByAgent(String agent)
+	{
+		List<Compte> compte =  rep.findByCreationAgent(agent);
+	
+		return compte;
+	}
 
 	public List<Compte> getComptes(Long id)  throws NotFoundException
 	{
