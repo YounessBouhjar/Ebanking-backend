@@ -1,0 +1,4 @@
+2021-06-27 18:42:53,535 INFO com.backend.EnsaBackApplication [main] Starting EnsaBackApplication on Sempo with PID 15984 (C:\Users\youne\Desktop\ebankingfinal\ebank-back\target\classes started by youne in C:\Users\youne\Desktop\ebankingfinal\ebank-back)
+2021-06-27 18:42:53,539 DEBUG com.backend.EnsaBackApplication [main] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2021-06-27 18:42:53,539 INFO com.backend.EnsaBackApplication [main] No active profile set, falling back to default profiles: default
+2021-06-27 18:43:22,492 INFO com.backend.EnsaBackApplication [main] Started EnsaBackApplication in 29.3 seconds (JVM running for 29.798)
